@@ -1,0 +1,10 @@
+docker build . -t webpack-test
+docker run -p 80:80 webpack-test
+
+nick@MacBook-Pro-Nick ~/f/webpack> docker ps
+CONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS                  PORTS                NAMES
+c8da96effa41        webpack-test        "nginx -g 'daemon of…"   2 seconds ago       Up Less than a second   0.0.0.0:80->80/tcp   quirky_noether
+                                                                                                                                                                                                                                                                      nick@MacBook-Pro-Nick ~/f/webpack> docker kill c8da96effa41
+
+docker-compose up
+docker-compose build
