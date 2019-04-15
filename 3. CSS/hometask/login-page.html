@@ -4,14 +4,46 @@
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
-		<title>Sell It</title>
+		<link rel="stylesheet" href="css/style.css" />
+		<title>Sell It | Login</title>
 	</head>
 	<body>
-		<section class="background-section">
-			<img src="./img/logo-small.png" alt="Small logo." />
-		</section>
-		<section class="form-section">
-			<img src="./img/logo-big.png" alt="" />
-		</section>
+		<div class="login-page">
+			<div class="section-bg">
+				<img class="logo-small" src="./img/logo-small.png" alt="Small logo." />
+			</div>
+			<div class="section-login">
+				<div class="image u-mb-big">
+					<img class="logo-big" src="./img/logo-big.png" alt="Big logo." />
+				</div>
+				<div class="tabs u-mb-md">
+					<button class="btn btn-small">Sign In</button>
+					<button class="btn btn-small">Sign Up</button>
+				</div>
+				<div>
+					<form class="form" action="#">
+						<div class="form-group u-mb-md">
+							<input
+								class="form__input"
+								id="email"
+								type="email"
+								placeholder="Email"
+								required
+							/>
+							<input
+								class="form__input"
+								id="password"
+								type="password"
+								placeholder="Password"
+								required
+							/>
+						</div>
+						<div class="form-group">
+							<button class="btn btn-big">Login</button>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
 	</body>
 </html>
