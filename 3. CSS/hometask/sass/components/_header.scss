@@ -1,0 +1,66 @@
+.header {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	height: 6rem;
+
+	&__logo {
+		margin-left: 5rem;
+	}
+}
+
+.search {
+	display: inline-flex;
+	flex: 0 1 55rem;
+	position: relative;
+	border-bottom: 2px solid #00b3be;
+	overflow: hidden;
+
+	&__input {
+		height: 2rem;
+		width: 55rem;
+		font-size: 1.6rem;
+		margin: 0;
+		background: transparent;
+		border: none;
+		outline: 0;
+		color: #000;
+	}
+
+	&__icon {
+		padding: 0.5rem;
+	}
+}
+
+.user-block {
+	flex: 0 1 38rem;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	height: 100%;
+	padding: 0 1rem;
+	background-color: #00b3be;
+
+	&__profile {
+		display: flex;
+		align-items: center;
+	}
+
+	&__name {
+		font-size: 1.6rem;
+		color: white;
+		margin: 0 1rem;
+	}
+
+	&__avatar {
+		width: 40px;
+		height: 40px;
+		border-radius: 50%;
+	}
+
+	&__sign-out {
+		border: none;
+		background: none;
+		padding: 0 1rem;
+	}
+}
