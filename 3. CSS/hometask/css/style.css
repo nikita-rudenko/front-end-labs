@@ -20,6 +20,9 @@ html {
   font-size: 62.5%;
   font-family: 'Arial-MT'; }
 
+body {
+  position: relative; }
+
 .u-center-text {
   text-align: center !important; }
 
@@ -39,6 +42,11 @@ html {
   margin-top: 10rem !important; }
 
 .header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: #fff;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -88,6 +96,20 @@ html {
     border: none;
     background: none;
     padding: 0 1rem; }
+
+.footer {
+  background: #00b3be;
+  height: 5rem;
+  padding: 1.7rem;
+  overflow: hidden;
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  text-align: center;
+  font-size: 1.6rem;
+  color: #fff;
+  font-family: 'Arial-BoldMT'; }
 
 .login-page {
   height: 100vh;
@@ -146,7 +168,8 @@ html {
   border: none;
   outline: 0;
   color: inherit;
-  height: 3.5rem; }
+  height: 3.5rem;
+  cursor: pointer; }
   .btn-small {
     width: 15rem; }
   .btn-big {
@@ -158,7 +181,8 @@ html {
   padding: 10rem 0rem;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between; }
+  justify-content: space-between;
+  flex: 1 0 auto; }
   .product-list::after {
     content: '';
     flex: auto; }
