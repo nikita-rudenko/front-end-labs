@@ -9,7 +9,6 @@
 	background-size: cover;
 	width: 100%;
 	flex: 1;
-	box-shadow: -0.5rem 0 1.5rem rgba(0, 0, 0, 0.35);
 
 	.logo-small {
 		max-width: 11.5rem;
@@ -18,7 +17,7 @@
 }
 
 .section-login {
-	background-color: #00b3be;
+	background-color: $color-primary;
 	flex: 0 0 38rem;
 	margin-left: -0.7rem;
 	padding: 2.5rem;
@@ -55,10 +54,10 @@
 			background: transparent;
 			border: none;
 			outline: 0;
-			color: #f2f2f2;
-			border-bottom: 2px solid #f2f2f2;
+			color: $color-white;
+			border-bottom: 2px solid $color-white;
 			&::placeholder {
-				color: #f2f2f2;
+				color: $color-white;
 			}
 			&:not(:last-child) {
 				margin-bottom: 1rem;
@@ -68,7 +67,7 @@
 }
 
 .btn {
-	background: #f2f2f2;
+	background: $color-white;
 	padding: 0;
 	border: none;
 	outline: 0;

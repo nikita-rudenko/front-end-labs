@@ -1,3 +1,11 @@
+@font-face {
+  font-family: 'Arial-MT';
+  src: url(../fonts/Arial-MT.otf); }
+
+@font-face {
+  font-family: 'Arial-BoldMT';
+  src: url(../fonts/Arial-BoldMT.otf); }
+
 * {
   margin: 0;
   padding: 0; }
@@ -9,7 +17,8 @@
 
 html {
   box-sizing: border-box;
-  font-size: 62.5%; }
+  font-size: 62.5%;
+  font-family: 'Arial-MT'; }
 
 .u-center-text {
   text-align: center !important; }
@@ -62,13 +71,14 @@ html {
   justify-content: space-between;
   height: 100%;
   padding: 0 1rem;
+  font-family: 'Arial-BoldMT';
   background-color: #00b3be; }
   .user-block__profile {
     display: flex;
     align-items: center; }
   .user-block__name {
     font-size: 1.6rem;
-    color: white;
+    color: #f2f2f2;
     margin: 0 1rem; }
   .user-block__avatar {
     width: 40px;
@@ -88,8 +98,7 @@ html {
   background: url(../img/background.png);
   background-size: cover;
   width: 100%;
-  flex: 1;
-  box-shadow: -0.5rem 0 1.5rem rgba(0, 0, 0, 0.35); }
+  flex: 1; }
   .section-bg .logo-small {
     max-width: 11.5rem;
     margin: 2.5rem; }
@@ -149,8 +158,7 @@ html {
   padding: 10rem 0rem;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
-  flex: auto; }
+  justify-content: space-between; }
   .product-list::after {
     content: '';
     flex: auto; }
@@ -158,7 +166,8 @@ html {
 .product {
   width: 32rem;
   height: 25rem;
-  margin: 2rem; }
+  margin: 2rem;
+  font-family: 'Arial-BoldMT'; }
   .product__image-wrapper {
     width: 100%;
     height: 80%; }
@@ -168,7 +177,7 @@ html {
     object-fit: cover; }
   .product__info {
     background-color: #00b3be;
-    color: #fff;
+    color: #f2f2f2;
     height: 5rem;
     display: flex;
     justify-content: space-between;
