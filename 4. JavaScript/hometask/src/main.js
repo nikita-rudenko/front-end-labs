@@ -36,24 +36,19 @@ export class Application {
 
 		// Check if input contains only letters and spaces
 		const regex = /^[a-z][a-z\s]*$/;
-
 		if (!regex.test(sentence)) {
 			console.log('Bad input. I accept only English letters and spaces!');
 			return;
 		}
 
 		const words = sentence.split(' ');
-		let decrypted = [];
+		let possibleShifts = {};
+		let shiftsSet = new Set();
 
 		for (let i = 0; i < words.length; i++) {
 			const word = words[i];
 
-			for (let shift = 0; shift <= 27; shift++) {
-				if (shift === 27) {
-					console.log('Unable to decode this  ¯\\_(ツ)_/¯');
-					return;
-				}
-
+			for (let shift = 0; shift <= 26; shift++) {
 				let str = '';
 
 				for (let k = 0; k < word.length; k++) {
@@ -68,14 +63,33 @@ export class Application {
 				}
 
 				// Check if the word exists
-				// Exit the loop if true
+				// Add possible shift to the object
+				// Add unique shift values to the Set
 				if (checkWord.check(str)) {
-					decrypted.push(str);
-					shift = 99;
+					possibleShifts[i]
+						? possibleShifts[i].push(shift)
+						: (possibleShifts[i] = [shift]);
+					shiftsSet.add(shift);
 				}
 			}
 		}
 
-		console.log(decrypted.join(' '));
+		// Find the shift that can be applied to all words
+		for (let shift of shiftsSet) {
+			for (let key in possibleShifts) {
+				if (!possibleShifts[key].includes(shift)) {
+					shiftsSet.delete(shift);
+				}
+			}
+		}
+
+		// If Set has at least one value,
+		// send the cipher to encode
+		if (shiftsSet.size) {
+			const perfectShift = Array.from(shiftsSet)[0];
+			this.encode({ text: sentence, shift: perfectShift });
+		} else {
+			console.log('Unable to decode this text!');
+		}
 	}
 }
